@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Professional portfolio of Abdelrahman Hani - IT Specialist, System Administrator, and IT Infrastructure Engineer. Explore enterprise network, server, and support solutions.">
+    <meta name="author" content="Abdelrahman Hani">
+    <title>Abdelrahman Hani | IT Specialist & Infrastructure Engineer Portfolio</title>
+
+    <!-- Favicon Placeholder (using SVG) -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+
+    <!-- Google Fonts: Inter & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dark-theme">
+
+    <!-- Loading Screen Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="spinner"></div>
+            <div class="preloader-text">Loading Infrastructure...</div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" class="scroll-progress-bar"></div>
+
+    <!-- Header / Sticky Navigation -->
+    <header class="main-header" id="header">
+        <div class="nav-container">
+            <a href="#hero" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-server"></i></span>
+                <span class="logo-text">AH<span class="accent">.TECH</span></span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link active">About</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                    <li><a href="#contact" class="nav-link btn-nav">Contact Me</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Theme Toggle Switcher -->
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light/dark mode">
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                </button>
+
+                <!-- Mobile Hamburger Menu Button -->
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Floating Particles Canvas Background wrapper for Hero -->
+    <div class="hero-canvas-wrapper">
+        <canvas id="particles-canvas"></canvas>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge-container">
+                    <span class="hero-badge"><i class="fa-solid fa-circle-check"></i> Available for Opportunities</span>
+                </div>
+                <h1 class="hero-name">Abdelrahman Hani</h1>
+                <h2 class="hero-titles">
+                    I am a <span id="typing-text" class="accent-text"></span><span class="typed-cursor">|</span>
+                </h2>
+                <p class="hero-summary">
+                    Results-driven IT Specialist with hands-on experience in enterprise IT infrastructure, Windows
+                    Server administration, Microsoft 365, Active Directory, Sophos Firewall, and enterprise networking.
+                    Currently supporting 174+ users while managing 13 Windows Servers, ensuring secure, reliable, and
+                    efficient IT operations.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#projects" class="btn btn-primary">View Projects <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me <i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://drive.google.com/file/d/1U7SzpAAu580Tn-w5en93yqP-kYjSsrPb/view?usp=drivesdk"
+                        class="btn btn-outline" download="Abdelrahman_Hani_CV.pdf">Download CV <i
+                            class="fa-solid fa-download"></i></a>
+                </div>
+            </div>
+
+            <!-- Hero Stats Grid -->
+            <div class="hero-stats-grid">
+                <div class="stat-card glass-card">
+                    <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+                    <div class="stat-number-wrapper">
+                        <span class="stat-number" data-target="174">0</span><span class="plus">+</span>
+                    </div>
+                    <p class="stat-label">Users Supported</p>
+                </div>
+
+                <div class="stat-card glass-card">
+                    <div class="stat-icon"><i class="fa-solid fa-network-wired"></i></div>
+                    <div class="stat-number-wrapper">
+                        <span class="stat-number" data-target="13">0</span>
+                    </div>
+                    <p class="stat-label">Windows Servers</p>
+                </div>
+
+                <div class="stat-card glass-card">
+                    <div class="stat-icon"><i class="fa-brands fa-windows"></i></div>
+                    <div class="stat-tech-name">Microsoft 365</div>
+                    <p class="stat-label">Enterprise Cloud</p>
+                </div>
+
+                <div class="stat-card glass-card">
+                    <div class="stat-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="stat-tech-name">Sophos Firewall</div>
+                    <p class="stat-label">Network Security</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-down-indicator">
+            <a href="#about" aria-label="Scroll down to About section">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section scroll-reveal">
+        <div class="section-container">
+            <span class="section-subtitle">Who I Am</span>
+            <h2 class="section-title">About Me</h2>
+
+            <div class="about-grid">
+                <div class="about-image-side">
+                    <div class="image-border-decor">
+                        <div class="about-img-wrapper">
+                            <!-- Falling back to custom styled visual element if PNG cannot copy, but initially using img/profile.png -->
+                            <img src="img/profile.jpg" alt="Abdelrahman Hani"
+                                onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22450%22 viewBox=%220 0 400 450%22><rect width=%22400%22 height=%22450%22 fill=%22%23131b2e%22/><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Poppins%22 font-size=%2224%22 fill=%22%230ea5e9%22>Abdelrahman Hani</text><text x=%2250%%22 y=%2256%%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Inter%22 font-size=%2216%22 fill=%22%2394a3b8%22>IT Specialist</text></svg>';"
+                                class="about-img">
+                        </div>
+                        <div class="floating-badge glass-card">
+                            <i class="fa-solid fa-award"></i>
+                            <div class="badge-txt">
+                                <h4>1+ Year Experience</h4>
+                                <p>IT Engineering</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-text-side">
+                    <h3 class="about-intro-title">Optimizing Enterprise IT Systems & Networks</h3>
+                    <p class="about-desc">
+                        I am an IT Specialist passionate about designing, maintaining, and optimizing enterprise IT
+                        infrastructures. My daily responsibilities include managing Windows Servers, administering
+                        Active Directory, Microsoft 365, Sophos Firewall, enterprise networking, ERP systems, and
+                        providing advanced technical support. I enjoy solving complex IT challenges, improving system
+                        performance, enhancing security, and ensuring business continuity.
+                    </p>
+
+                    <h4 class="scope-title">Current Administrative Scope:</h4>
+                    <div class="scope-grid">
+                        <div class="scope-item"><i class="fa-solid fa-users-gear scope-icon"></i> 174 Enterprise Users
+                        </div>
+                        <div class="scope-item"><i class="fa-solid fa-server scope-icon"></i> 13 Windows Servers</div>
+                        <div class="scope-item"><i class="fa-brands fa-microsoft scope-icon"></i> Microsoft 365 Admin
+                        </div>
+                        <div class="scope-item"><i class="fa-solid fa-shield-halved scope-icon"></i> Sophos Firewall
+                        </div>
+                        <div class="scope-item"><i class="fa-solid fa-network-wired scope-icon"></i> Network
+                            Infrastructure</div>
+                        <div class="scope-item"><i class="fa-solid fa-cubes scope-icon"></i> Odoo ERP Support</div>
+                        <div class="scope-item"><i class="fa-solid fa-chart-line scope-icon"></i> Salesforce CRM</div>
+                        <div class="scope-item"><i class="fa-solid fa-database scope-icon"></i> Oracle Systems</div>
+                    </div>
+
+                    <div class="personal-info-grid">
+                        <div class="info-row">
+                            <span class="info-label">Location:</span>
+                            <span class="info-value">Dakahlia, Egypt</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Email:</span>
+                            <span class="info-value"><a
+                                    href="mailto:abdelrahman.hani.cs@gmail.com">abdelrahman.hani.cs@gmail.com</a></span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Phone:</span>
+                            <span class="info-value"><a href="tel:+2010080722856">+20 100 807 22856</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Highlights Section -->
+    <section id="highlights" class="highlights-section scroll-reveal">
+        <div class="section-container">
+            <span class="section-subtitle">Core Capabilities</span>
+            <h2 class="section-title">Professional Highlights</h2>
+
+            <div class="highlights-grid">
+                <div class="highlight-card glass-card">
+                    <div class="highlight-icon-wrapper"><i class="fa-solid fa-users"></i></div>
+                    <h3>174+ Corporate Users Supported</h3>
+                    <p>Ensuring seamless workflow, system access, hardware compatibility, and daily problem resolution
+                        for employees across departments.</p>
+                </div>
+
+                <div class="highlight-card glass-card">
+                    <div class="highlight-icon-wrapper"><i class="fa-solid fa-server"></i></div>
+                    <h3>13 Windows Servers Managed</h3>
+                    <p>Maintaining high availability, conducting routine patches, backup routines, virtualization node
+                        allocations, and direct directory structures.</p>
+                </div>
+
+                <div class="highlight-card glass-card">
+                    <div class="highlight-icon-wrapper"><i class="fa-brands fa-microsoft"></i></div>
+                    <h3>Microsoft 365 Administration</h3>
+                    <p>Configuring email policies, distribution lists, OneDrive shared folders, Microsoft Teams
+                        collaboration channels, and identity security.</p>
+                </div>
+
+                <div class="highlight-card glass-card">
+                    <div class="highlight-icon-wrapper"><i class="fa-solid fa-user-shield"></i></div>
+                    <h3>Sophos Firewall Security</h3>
+                    <p>Enforcing custom gateway rules, VLAN routing boundaries, web filters, site-to-site VPN tunnels,
+                        and threat inspection mechanisms.</p>
+                </div>
+
+                <div class="highlight-card glass-card">
+                    <div class="highlight-icon-wrapper"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3>Enterprise Infrastructure</h3>
+                    <p>Designing physical layer wiring schemes, managed switch trunk lines, Wi-Fi access distributions,
+                        and core server racks organization.</p>
+                </div>
+
+                <div class="highlight-card glass-card">
+                    <div class="highlight-icon-wrapper"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Daily Technical Problem Solving</h3>
+                    <p>Deploying remote diagnostic methods, resolving software glitches, database connectivity delays,
+                        and peripheral failures under SLA constraints.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section id="experience" class="experience-section scroll-reveal">
+        <div class="section-container">
+            <span class="section-subtitle">My Journey</span>
+            <h2 class="section-title">Professional Experience</h2>
+
+            <div class="timeline">
+                <!-- Vertical Progress Line -->
+                <div class="timeline-line"></div>
+
+                <!-- Experience Item 1 -->
+                <div class="timeline-item timeline-item-left">
+                    <div class="timeline-dot"><i class="fa-solid fa-briefcase"></i></div>
+                    <div class="timeline-date">Sept 2025 – Present</div>
+                    <div class="timeline-content glass-card">
+                        <span class="job-company">Abdelaziz El Sallah Company for Trading & Import</span>
+                        <h3 class="job-role">IT Specialist</h3>
+                        <p class="job-overview">Overseeing complete IT systems, supporting team productivity, and
+                            managing robust network/server layers across the corporate branches.</p>
+
+                        <h4 class="job-resp-title">Key Responsibilities:</h4>
+                        <ul class="job-responsibilities">
+                            <li><i class="fa-solid fa-check"></i> Supporting 174+ users and ensuring maximum hardware &
+                                software uptime.</li>
+                            <li><i class="fa-solid fa-check"></i> Actively managing 13 Windows Servers, hosting DNS,
+                                DHCP, and file sharing.</li>
+                            <li><i class="fa-solid fa-check"></i> Administering Active Directory (AD DS) and Group
+                                Policy Objects (GPOs).</li>
+                            <li><i class="fa-solid fa-check"></i> Implementing security rules on Sophos Firewall for
+                                network perimeter protection.</li>
+                            <li><i class="fa-solid fa-check"></i> Running Microsoft 365 Cloud Admin, including Exchange
+                                Online, security and compliance.</li>
+                            <li><i class="fa-solid fa-check"></i> Support, update and maintain connection pipelines for
+                                Odoo ERP, Salesforce, and Oracle.</li>
+                            <li><i class="fa-solid fa-check"></i> Network maintenance, deploying CCTV cameras, managing
+                                printer network setups, and handling hardware diagnostics.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="timeline-item timeline-item-right">
+                    <div class="timeline-dot"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="timeline-date">May 2023 – Oct 2024</div>
+                    <div class="timeline-content glass-card">
+                        <span class="job-company">MIT Ghamir Azhari Institute</span>
+                        <h3 class="job-role">Computer Science Teacher</h3>
+                        <p class="job-overview">Delivering educational curriculums, supervising engineering labs, and
+                            managing the local hardware/software configurations.</p>
+
+                        <h4 class="job-resp-title">Key Responsibilities:</h4>
+                        <ul class="job-responsibilities">
+                            <li><i class="fa-solid fa-check"></i> Instructing high school students on core computer
+                                science and software concepts.</li>
+                            <li><i class="fa-solid fa-check"></i> Managing computer labs, including system imaging,
+                                hardware repairs, and inventory.</li>
+                            <li><i class="fa-solid fa-check"></i> Providing localized IT support for administrative
+                                personnel.</li>
+                            <li><i class="fa-solid fa-check"></i> Diagnosing local LAN network outages, switches
+                                configurations, and Wi-Fi coverage.</li>
+                            <li><i class="fa-solid fa-check"></i> Deploying security standards on workstations and
+                                supervising student online activities.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="skills-section scroll-reveal">
+        <div class="section-container">
+            <span class="section-subtitle">Expertise Grid</span>
+            <h2 class="section-title">Technical Skills</h2>
+
+            <div class="skills-tabs">
+                <button class="skill-tab-btn active" data-filter="all">All Skills</button>
+                <button class="skill-tab-btn" data-filter="sysadmin">System Admin</button>
+                <button class="skill-tab-btn" data-filter="networking">Networking</button>
+                <button class="skill-tab-btn" data-filter="security">Security</button>
+                <button class="skill-tab-btn" data-filter="enterprise">Enterprise Apps</button>
+            </div>
+
+            <div class="skills-grid">
+
+                <!-- System Admin Category -->
+                <div class="skill-card glass-card" data-category="sysadmin">
+                    <div class="skill-header">
+                        <i class="fa-solid fa-server skill-icon"></i>
+                        <h3>Windows Server</h3>
+                    </div>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress" data-width="90%"></div>
+                    </div>
+                    <span class="skill-percent">90%</span>
+                </div>
+
+                <div class="skill-card glass-card" data-category="sysadmin">
+                    <div class="skill-header">
+                        <i class="fa-solid fa-network-wired skill-icon"></i>
+                        <h3>Active Directory</h3>
+                    </div>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress" data-width="95%"></div>
+                    </div>
+                    <span class="skill-percent">95%</span>
+                </div>
+
+                <div class="skill-card glass-card" data-category="sysadmin">
+                    <div class="skill-header">
+                        <i class="fa-solid fa-gears skill-icon"></i>
+                        <h3>Group Policy (GPO)</h3>
+                    </div>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress" data-width="88%"></div>
+                    </div>
+                    <span class="skill-percent">88%</span>
+                </div>
+
+                <div class="skill-card glass-card" data-category="sysadmin">
+                    <div class="skill-header">
+                        <i class="fa-brands fa-microsoft skill-icon"></i>
+                        <h3>Microsoft 365 Admin</h3>
+                    </div>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress" data-width="92%"></div>
+                    </div>
+                    <span class="skill-percent">92%</span>
+                </div>
+
+                <!-- Networking Category -->
+                <div class="skill-card glass-card" data-category="networking">
+                    <div class="skill-header">
+                        <i class="fa-solid fa-route skill-icon"></i>
+                        <h3>Routing & Switching</h3>
+                    </div>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress" data-width="85%"></div>
+                    </div>
+                    <span class="skill-percent">85%</span>
+                </div>
+
+                <div class="skill-card glass-card" data-category="networking">
+                    <div class="skill-header">
+                        <i class="fa-solid fa-diagram-project skill-icon"></i>
+                        <h3>DNS / DHCP</h3>
+                    </div>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress" data-width="90%"></div>
+                    </div>
+                    <span class="skill-percent">90%</span>
+                </div>
+
+                <div class="skill-card glass-card" data-category="networking">
+                    <div class="skill-header">
+                        <i class="fa-solid fa-network-wired skill-icon"></i>
+                        <h3>VLANs & LAN/WAN</h3>
+                    </div>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress" data-width="87%"></div>
+                    </div>
+                    <span class="skill-percent">87%</span>
+                </div>
+
+                <!-- Security Category -->
+                <div class="skill-card glass-card" data-category="security">
+                    <div class="skill-header">
+                        <i class="fa-solid fa-shield-halved skill-icon"></i>
+                        <h3>Sophos Firewall</h3>
+                    </div>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress" data-width="88%"></div>
+                    </div>
+                    <span class="skill-percent">88%</span>
+                </div>
+
+                <div class="skill-card glass-card" data-category="security">
+                    <div class="skill-header">
+                        <i class="fa-solid fa-shield-cat skill-icon"></i>
+                        <h3>Endpoint Protection</h3>
+                    </div>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress" data-width="85%"></div>
+                    </div>
+                    <span class="skill-percent">85%</span>
+                </div>
+
+                <div class="skill-card glass-card" data-category="security">
+                    <div class="skill-header">
+                        <i class="fa-solid fa-video skill-icon"></i>
+                        <h3>CCTV Systems</h3>
+                    </div>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress" data-width="90%"></div>
+                    </div>
+                    <span class="skill-percent">90%</span>
+                </div>
+
+                <!-- Enterprise Apps & Tools Category -->
+                <div class="skill-card glass-card" data-category="enterprise">
+                    <div class="skill-header">
+                        <i class="fa-solid fa-cubes skill-icon"></i>
+                        <h3>Odoo ERP Support</h3>
+                    </div>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress" data-width="80%"></div>
+                    </div>
+                    <span class="skill-percent">80%</span>
+                </div>
+
+                <div class="skill-card glass-card" data-category="enterprise">
+                    <div class="skill-header">
+                        <i class="fa-solid fa-chart-line skill-icon"></i>
+                        <h3>Salesforce CRM</h3>
+                    </div>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress" data-width="75%"></div>
+                    </div>
+                    <span class="skill-percent">75%</span>
+                </div>
+
+                <div class="skill-card glass-card" data-category="enterprise">
+                    <div class="skill-header">
+                        <i class="fa-solid fa-database skill-icon"></i>
+                        <h3>Oracle Systems</h3>
+                    </div>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress" data-width="78%"></div>
+                    </div>
+                    <span class="skill-percent">78%</span>
+                </div>
+
+                <div class="skill-card glass-card" data-category="enterprise">
+                    <div class="skill-header">
+                        <i class="fa-solid fa-headset skill-icon"></i>
+                        <h3>Remote Support (AnyDesk)</h3>
+                    </div>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress" data-width="95%"></div>
+                    </div>
+                    <span class="skill-percent">95%</span>
+                </div>
+
+                <div class="skill-card glass-card" data-category="enterprise">
+                    <div class="skill-header">
+                        <i class="fa-brands fa-python skill-icon"></i>
+                        <h3>Python Programming</h3>
+                    </div>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress" data-width="70%"></div>
+                    </div>
+                    <span class="skill-percent">70%</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section scroll-reveal">
+        <div class="section-container">
+            <span class="section-subtitle">What I Do</span>
+            <h2 class="section-title">Enterprise IT Services</h2>
+
+            <div class="services-grid">
+
+                <div class="service-card glass-card">
+                    <div class="service-icon"><i class="fa-solid fa-server"></i></div>
+                    <h3>Windows Server Management</h3>
+                    <p>Complete lifecycle management including deployment, Active Directory configurations, custom
+                        Domain Services, and automated Group Policies management.</p>
+                </div>
+
+                <div class="service-card glass-card">
+                    <div class="service-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                    <h3>Network Design & Setup</h3>
+                    <p>Building secure network infrastructures: subnets, VLAN divisions, dynamic configurations
+                        (DHCP/DNS), switch/router trunking and remote VPN accessibility.</p>
+                </div>
+
+                <div class="service-card glass-card">
+                    <div class="service-icon"><i class="fa-brands fa-microsoft"></i></div>
+                    <h3>Microsoft 365 Administration</h3>
+                    <p>Administering enterprise cloud solutions. Setting up global security, account delegations, email
+                        flow settings, and cloud data safety compliance.</p>
+                </div>
+
+                <div class="service-card glass-card">
+                    <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Sophos Firewall Configuration</h3>
+                    <p>Securing networks via enterprise grade Firewalls. Creating NAT structures, web content filtering,
+                        threat containment rules, and intrusion control.</p>
+                </div>
+
+                <div class="service-card glass-card">
+                    <div class="service-icon"><i class="fa-solid fa-cubes"></i></div>
+                    <h3>ERP Technical Support</h3>
+                    <p>Maintaining database queries, monitoring uptime interfaces, and assisting user workflows in Odoo,
+                        Salesforce CRM, and Oracle systems.</p>
+                </div>
+
+                <div class="service-card glass-card">
+                    <div class="service-icon"><i class="fa-solid fa-video"></i></div>
+                    <h3>CCTV Installation & Maintenance</h3>
+                    <p>Planning surveillance environments, mounting hardware, setting IP scopes, configuring network
+                        video recorders (NVR), and remote app access setup.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section scroll-reveal">
+        <div class="section-container">
+            <span class="section-subtitle">Completed Work</span>
+            <h2 class="section-title">Featured Projects</h2>
+
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="networking">Networking</button>
+                <button class="filter-btn" data-filter="servers">Servers</button>
+                <button class="filter-btn" data-filter="support">IT Support</button>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- Project 1 -->
+                <article class="project-card glass-card" data-category="networking">
+                    <div class="project-img-container">
+                        <img src="img/project1.png" alt="Enterprise Network Infrastructure"
+                            onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22250%22 viewBox=%220 0 400 250%22><rect width=%22400%22 height=%22250%22 fill=%22%23131b2e%22/><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Poppins%22 font-size=%2218%22 fill=%22%230ea5e9%22>Enterprise Network</text></svg>';"
+                            class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" aria-label="View live demo placeholder"><i class="fa-solid fa-link"></i>
+                                    Demo</a>
+                                <a href="#" aria-label="View GitHub repo placeholder"><i
+                                        class="fa-brands fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <span class="project-tag">Networking</span>
+                        <h3>Enterprise Network Infrastructure</h3>
+                        <p>Designed and implemented a simulated enterprise network including VLAN segmentation, routing,
+                            DHCP, DNS, ACLs, and secure WAN connectivity.</p>
+                        <div class="project-tech-tags">
+                            <span>VLANs</span>
+                            <span>Cisco IOS</span>
+                            <span>ACLs</span>
+                            <span>DHCP/DNS</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card glass-card" data-category="servers">
+                    <div class="project-img-container">
+                        <img src="img/project2.png" alt="Windows Server Infrastructure"
+                            onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22250%22 viewBox=%220 0 400 250%22><rect width=%22400%22 height=%22250%22 fill=%22%23131b2e%22/><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Poppins%22 font-size=%2218%22 fill=%22%230ea5e9%22>Windows Server</text></svg>';"
+                            class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" aria-label="View live demo placeholder"><i class="fa-solid fa-link"></i>
+                                    Demo</a>
+                                <a href="#" aria-label="View GitHub repo placeholder"><i
+                                        class="fa-brands fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <span class="project-tag">Server Admin</span>
+                        <h3>Windows Server Infrastructure</h3>
+                        <p>Built an enterprise Active Directory environment from scratch including Domain Controller
+                            setups, GPOs management, security subfolders, and user scope policies.</p>
+                        <div class="project-tech-tags">
+                            <span>Windows Server 2022</span>
+                            <span>AD DS</span>
+                            <span>GPO</span>
+                            <span>DNS/DHCP</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card glass-card" data-category="support">
+                    <div class="project-img-container">
+                        <img src="img/project3.png" alt="Enterprise IT Support"
+                            onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22250%22 viewBox=%220 0 400 250%22><rect width=%22400%22 height=%22250%22 fill=%22%23131b2e%22/><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Poppins%22 font-size=%2218%22 fill=%22%230ea5e9%22>IT Support & Ops</text></svg>';"
+                            class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" aria-label="View live demo placeholder"><i class="fa-solid fa-link"></i>
+                                    Demo</a>
+                                <a href="#" aria-label="View GitHub repo placeholder"><i
+                                        class="fa-brands fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <span class="project-tag">System Support</span>
+                        <h3>Enterprise IT Support</h3>
+                        <p>Providing daily technical support, Microsoft 365 administration, server maintenance, firewall
+                            management, and infrastructure monitoring for 174 users.</p>
+                        <div class="project-tech-tags">
+                            <span>Sophos</span>
+                            <span>M365 Admin</span>
+                            <span>Monitoring</span>
+                            <span>User Support</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Objective & Achievements (Double Column Grid) -->
+    <section id="objective-certifications" class="objective-certifications-section scroll-reveal">
+        <div class="section-container">
+            <div class="obj-certs-grid">
+
+                <!-- Career Objective Column -->
+                <div class="objective-column">
+                    <span class="section-subtitle">My Direction</span>
+                    <h2 class="section-title">Career Objective</h2>
+                    <div class="objective-card glass-card">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="objective-text">
+                            "My goal is to become a highly skilled IT Infrastructure Engineer specializing in enterprise
+                            systems, cloud technologies, Microsoft solutions, and cybersecurity while delivering secure,
+                            scalable, and innovative IT solutions that improve business performance."
+                        </p>
+                        <div class="objective-divider"></div>
+                        <div class="objective-author">
+                            <h4>Abdelrahman Hani</h4>
+                            <p>IT Specialist & Systems Engineer</p>
+                        </div>
+                    </div>
+
+                    <span class="section-subtitle" style="margin-top: 3rem; display: block;">Academic Base</span>
+                    <h2 class="section-title">Education</h2>
+                    <div class="education-card glass-card">
+                        <div class="edu-header">
+                            <i class="fa-solid fa-graduation-cap edu-icon"></i>
+                            <div>
+                                <h3>Bachelor of Computer Science</h3>
+                                <p>Al-Azhar University (2021 – 2025)</p>
+                            </div>
+                        </div>
+                        <div class="edu-badge">Grade: Very Good</div>
+                    </div>
+
+                    <span class="section-subtitle" style="margin-top: 3rem; display: block;">Communication</span>
+                    <h2 class="section-title">Languages</h2>
+                    <div class="languages-flex">
+                        <div class="lang-card glass-card">
+                            <span class="lang-flag"><i class="fa-solid fa-globe"></i></span>
+                            <div>
+                                <h4>Arabic</h4>
+                                <p>Native Speaker</p>
+                            </div>
+                        </div>
+                        <div class="lang-card glass-card">
+                            <span class="lang-flag"><i class="fa-solid fa-language"></i></span>
+                            <div>
+                                <h4>English</h4>
+                                <p>Professional Proficiency</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications Column -->
+                <div class="certifications-column" id="certifications">
+                    <span class="section-subtitle">Credentials</span>
+                    <h2 class="section-title">Certifications</h2>
+
+                    <div class="certifications-list">
+
+                        <div class="cert-card glass-card">
+                            <div class="cert-badge-icon"><i class="fa-solid fa-certificate"></i></div>
+                            <div class="cert-info">
+                                <h3>CCNA v7</h3>
+                                <p class="cert-issuer">Cisco Networking Academy</p>
+                                <span class="cert-desc-tag">Routing & Switching Essentials</span>
+                            </div>
+                        </div>
+
+                        <div class="cert-card glass-card">
+                            <div class="cert-badge-icon"><i class="fa-solid fa-network-wired"></i></div>
+                            <div class="cert-info">
+                                <h3>Networking Essentials</h3>
+                                <p class="cert-issuer">Cisco Networking Academy</p>
+                                <span class="cert-desc-tag">Foundational IT Infrastructure</span>
+                            </div>
+                        </div>
+
+                        <div class="cert-card glass-card">
+                            <div class="cert-badge-icon"><i class="fa-brands fa-python"></i></div>
+                            <div class="cert-info">
+                                <h3>Python Programming Fundamentals</h3>
+                                <p class="cert-issuer">Information Technology Institute (ITI)</p>
+                                <span class="cert-desc-tag">Automation & Scripting Basics</span>
+                            </div>
+                        </div>
+
+                        <div class="cert-card glass-card">
+                            <div class="cert-badge-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                            <div class="cert-info">
+                                <h3>Certificate of Expertise: Computer Science Instruction</h3>
+                                <p class="cert-issuer">Al-Azhar University</p>
+                                <span class="cert-desc-tag">Educational Lab Supervision</span>
+                            </div>
+                        </div>
+
+                        <div class="cert-card glass-card">
+                            <div class="cert-badge-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div class="cert-info">
+                                <h3>Time Management & Organization Skills</h3>
+                                <p class="cert-issuer">Canadian International Training (CIT)</p>
+                                <span class="cert-desc-tag">Professional Communication & Productivity</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section scroll-reveal">
+        <div class="section-container">
+            <span class="section-subtitle">Get In Touch</span>
+            <h2 class="section-title">Contact Information</h2>
+
+            <div class="contact-grid">
+
+                <!-- Contact info details -->
+                <div class="contact-info-side">
+                    <h3>Let's Connect on Infrastructure Projects</h3>
+                    <p>Have an IT support project, system migration or network implementation? Send a message and let's
+                        optimize your business setup.</p>
+
+                    <div class="contact-details-list">
+                        <div class="contact-item-card glass-card">
+                            <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="c-info">
+                                <h4>Email Me</h4>
+                                <a href="mailto:abdelrahman.hani.cs@gmail.com">abdelrahman.hani.cs@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item-card glass-card">
+                            <div class="c-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="c-info">
+                                <h4>Call / WhatsApp</h4>
+                                <a href="tel:+2010080722856">+20 100 807 22856</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item-card glass-card">
+                            <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="c-info">
+                                <h4>Work Location</h4>
+                                <p>Dakahlia, Egypt (Open to Remote / Relocation)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links-wrapper">
+                        <h4>Find Me Online</h4>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/abdelrhman-hani-778921397"
+                                aria-label="LinkedIn Profile" class="social-link linkedin"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://github.com/AbdelrahmanH-sys" aria-label="GitHub Profile"
+                                class="social-link github"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.facebook.com/share/1E8pQ1eUeN/" aria-label="Facebook Profile"
+                                class="social-link facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.youtube.com/" aria-label="YouTube Channel"
+                                class="social-link youtube"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Contact Form -->
+                <div class="contact-form-side glass-card">
+                    <h3>Send a Direct Message</h3>
+                    <form id="contact-form" action="https://formsubmit.co/abdelrahman.hani.cs@gmail.com" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Your Name</label>
+                            <span class="error-msg" id="name-error">Please enter your name.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Your Email Address</label>
+                            <span class="error-msg" id="email-error">Please enter a valid email address.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required placeholder=" ">
+                            <label for="subject">Project Subject</label>
+                            <span class="error-msg" id="subject-error">Please state your project subject.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                            <label for="message">Detailed Message</label>
+                            <span class="error-msg" id="message-error">Please enter a message.</span>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="btn btn-primary btn-submit">
+                            <span class="btn-text">Transmit Message <i class="fa-solid fa-paper-plane"></i></span>
+                            <span class="spinner-inline hidden"></span>
+                        </button>
+                    </form>
+
+                    <!-- Simulated success toast -->
+                    <div id="toast-message" class="toast hidden">
+                        <i class="fa-solid fa-circle-check toast-icon"></i>
+                        <div class="toast-body">
+                            <h4>Success!</h4>
+                            <p>Your message has been sent successfully.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>&copy; 2026 Abdelrahman Hani. All rights reserved.</p>
+                <p class="footer-meta">Engineered with modern HTML5, CSS3, &amp; Vanilla JS</p>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/in/abdelrhman-hani-778921397" aria-label="LinkedIn Link"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/AbdelrahmanH-sys" aria-label="GitHub Link"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://www.facebook.com/share/1E8pQ1eUeN/" aria-label="Facebook Link"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/" aria-label="YouTube Link"><i
+                            class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Go back to the top of the page">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
