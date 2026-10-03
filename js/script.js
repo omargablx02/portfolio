@@ -533,4 +533,23 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // ==========================================================================
+    // 13. FULLY CLICKABLE CERTIFICATE CARDS
+    // ==========================================================================
+    // Cards marked .cert-linked show cursor:pointer, so make the whole surface
+    // open the primary link. Real links still work normally because clicks that
+    // originate on an <a> are ignored here.
+    document.querySelectorAll('.cert-linked').forEach((card) => {
+        const primaryLink = card.querySelector('a[href]');
+        if (!primaryLink) return;
+
+        card.addEventListener('click', (e) => {
+            // Let the browser handle clicks on actual links and text selection
+            if (e.target.closest('a')) return;
+            if (window.getSelection().toString()) return;
+
+            window.open(primaryLink.href, '_blank', 'noopener,noreferrer');
+        });
+    });
 });
