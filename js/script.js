@@ -1,5 +1,5 @@
 /**
- * Abdelrahman Hani - Professional Portfolio Scripts
+ * Omar Ashraf - Professional Portfolio Scripts
  * ----------------------------------------------------
  * Custom Interactive Dynamics & Responsive Animations
  */
