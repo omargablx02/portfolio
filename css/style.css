@@ -1648,6 +1648,12 @@ body.light-theme .theme-toggle-btn .moon-icon {
     border-color: #ff0000;
 }
 
+.social-link.hackerrank:hover {
+    background-color: #00ea64;
+    border-color: #00ea64;
+    color: #0b0f14;
+}
+
 /* Interactive Contact Form */
 .contact-form-side {
     padding: 40px;
