@@ -1581,13 +1581,14 @@ body.light-theme .theme-toggle-btn .moon-icon {
     text-decoration: underline;
 }
 
-/* Whole card is clickable when a certificate link exists */
-.cert-card.cert-linked {
+/* Whole card is clickable when a certificate link exists.
+   Matches any .cert-linked surface (cert cards + the education card). */
+.cert-linked {
     cursor: pointer;
     transition: transform var(--transition-normal), border-color var(--transition-normal);
 }
 
-.cert-card.cert-linked:hover {
+.cert-linked:hover {
     transform: translateY(-3px);
     border-color: var(--accent-color);
 }
