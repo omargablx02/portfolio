@@ -947,6 +947,18 @@ body.light-theme .theme-toggle-btn .moon-icon {
     left: 50%;
 }
 
+/* Single timeline entry: centered instead of alternating left/right */
+.timeline-item-single {
+    left: 50%;
+    width: min(620px, 92%);
+    transform: translateX(-50%);
+}
+
+.timeline-item-single .timeline-dot {
+    right: auto;
+    left: -22px;
+}
+
 .timeline-dot {
     position: absolute;
     top: 25px;
@@ -2008,13 +2020,17 @@ body.light-theme .theme-toggle-btn .moon-icon {
     }
 
     .timeline-item-left,
-    .timeline-item-right {
+    .timeline-item-right,
+    .timeline-item-single {
         left: 0;
+        transform: none;
     }
 
     .timeline-item-left .timeline-dot,
-    .timeline-item-right .timeline-dot {
+    .timeline-item-right .timeline-dot,
+    .timeline-item-single .timeline-dot {
         left: 8px;
+        right: auto;
     }
 
     .contact-grid {
