@@ -412,14 +412,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================================================
-    // 11. INTERACTIVE CONTACT FORM SUBMISSION WITH SIMULATED TRANSMISSION
+    // 11. INTERACTIVE CONTACT FORM SUBMISSION (real delivery via FormSubmit AJAX)
     // ==========================================================================
     const contactForm = document.getElementById('contact-form');
     const submitBtn = document.getElementById('submit-btn');
     const toast = document.getElementById('toast-message');
 
+    // Renders the toast in either success or error state.
+    const showToast = (isSuccess, title, message) => {
+        if (!toast) return;
+
+        const icon = toast.querySelector('.toast-icon');
+        const heading = toast.querySelector('.toast-body h4');
+        const body = toast.querySelector('.toast-body p');
+
+        toast.classList.toggle('toast-error', !isSuccess);
+        if (icon) {
+            icon.className = isSuccess ? 'fa-solid fa-circle-check toast-icon' : 'fa-solid fa-circle-exclamation toast-icon';
+        }
+        if (heading) heading.textContent = title;
+        if (body) body.textContent = message;
+
+        toast.classList.remove('hidden');
+        setTimeout(() => toast.classList.add('hidden'), 6000);
+    };
+
     if (contactForm && submitBtn) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
             // Validate inputs
@@ -455,7 +474,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (hasError) return; // Exit if validation fails
 
-            // Start simulated network transmission
+            // Lock the button while the request is in flight
             const btnText = submitBtn.querySelector('.btn-text');
             const spinner = submitBtn.querySelector('.spinner-inline');
 
@@ -463,23 +482,31 @@ document.addEventListener('DOMContentLoaded', () => {
             spinner.classList.remove('hidden');
             submitBtn.disabled = true;
 
-            setTimeout(() => {
-                // Success State
+            try {
+                // Accept: application/json makes FormSubmit answer with JSON
+                // instead of redirecting the visitor to an interstitial page.
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: new FormData(contactForm),
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (!response.ok) throw new Error('HTTP ' + response.status);
+
+                contactForm.reset();
+                showToast(true, 'Message sent!', 'Thanks for reaching out — I\'ll get back to you soon.');
+            } catch (err) {
+                console.error('Contact form submission failed:', err);
+                showToast(
+                    false,
+                    'Could not send',
+                    'Something went wrong. Please email me directly at omar.ashraf.gabl@gmail.com.'
+                );
+            } finally {
                 spinner.classList.add('hidden');
                 btnText.classList.remove('hidden');
                 submitBtn.disabled = false;
-
-                // Clear form
-                contactForm.reset();
-
-                // Trigger Success Toast Popup
-                if (toast) {
-                    toast.classList.remove('hidden');
-                    setTimeout(() => {
-                        toast.classList.add('hidden');
-                    }, 5000); // Auto hide after 5 seconds
-                }
-            }, 2000); // 2-second simulation latency
+            }
         });
     }
 

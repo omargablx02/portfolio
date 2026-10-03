@@ -1785,6 +1785,26 @@ body.light-theme .theme-toggle-btn .moon-icon {
     color: var(--text-secondary);
 }
 
+/* Toast error state (contact form failure) */
+.toast.toast-error {
+    background-color: rgba(239, 68, 68, 0.1);
+    border-color: rgba(239, 68, 68, 0.3);
+    color: #ef4444;
+}
+
+.toast.toast-error .toast-body h4 {
+    color: #ef4444;
+}
+
+/* Project date range, shown under the project title */
+.project-date {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: -4px;
+    margin-bottom: 10px;
+}
+
 @keyframes slideInDown {
     0% {
         transform: translateY(-10px);

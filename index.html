@@ -423,6 +423,28 @@
 
                 <div class="skill-card glass-card" data-category="networking">
                     <div class="skill-header">
+                        <i class="fa-solid fa-code-branch skill-icon"></i>
+                        <h3>RIP / Static Routing</h3>
+                    </div>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress" data-width="80%"></div>
+                    </div>
+                    <span class="skill-percent">80%</span>
+                </div>
+
+                <div class="skill-card glass-card" data-category="networking">
+                    <div class="skill-header">
+                        <i class="fa-solid fa-phone-volume skill-icon"></i>
+                        <h3>IP Telephony</h3>
+                    </div>
+                    <div class="skill-progress-bar">
+                        <div class="skill-progress" data-width="78%"></div>
+                    </div>
+                    <span class="skill-percent">78%</span>
+                </div>
+
+                <div class="skill-card glass-card" data-category="networking">
+                    <div class="skill-header">
                         <i class="fa-solid fa-diagram-project skill-icon"></i>
                         <h3>DNS / DHCP</h3>
                     </div>
@@ -629,6 +651,7 @@
                     <div class="project-details">
                         <span class="project-tag">Networking</span>
                         <h3>Enterprise Network Design</h3>
+                        <span class="project-date">April 2025 – Present</span>
                         <p>Configured multi-area OSPF with HSRP redundancy across three office zones, VLAN segmentation
                             and traffic security enforcement. Documented the repository layout with semantic Markdown so
                             the topology stays readable and maintainable.</p>
@@ -659,6 +682,7 @@
                     <div class="project-details">
                         <span class="project-tag">Automation</span>
                         <h3>Infrastructure Automation &amp; Shell Scripting</h3>
+                        <span class="project-date">May 2024 – Present</span>
                         <p>Engineered a <code>whoami</code> Bash script aggregating 15+ system telemetry metrics with
                             automated network diagnostics, plus interactive Python GUIs (Snake, Cars, Hangman, Turtle).
                             Full source lifecycle managed with Git and GitHub.</p>
@@ -864,6 +888,8 @@
                                 class="social-link linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
                             <a href="https://github.com/omargablx02" aria-label="GitHub Profile"
                                 class="social-link github"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://hackerrank.com/omargablx02" aria-label="HackerRank Profile"
+                                class="social-link hackerrank"><i class="fa-solid fa-code"></i></a>
                         </div>
                     </div>
                 </div>
@@ -896,18 +922,25 @@
                             <span class="error-msg" id="message-error">Please enter a message.</span>
                         </div>
 
+                        <!-- FormSubmit config: skip its onboarding email + set a captcha-free endpoint -->
+                        <input type="hidden" name="_subject" value="New portfolio inquiry from omarashraf.dev">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="text" name="_honey" tabindex="-1" autocomplete="off"
+                            style="display:none" aria-hidden="true">
+
                         <button type="submit" id="submit-btn" class="btn btn-primary btn-submit">
                             <span class="btn-text">Transmit Message <i class="fa-solid fa-paper-plane"></i></span>
                             <span class="spinner-inline hidden"></span>
                         </button>
                     </form>
 
-                    <!-- Simulated success toast -->
+                    <!-- Contact form status toast (success / error set by script.js) -->
                     <div id="toast-message" class="toast hidden">
                         <i class="fa-solid fa-circle-check toast-icon"></i>
                         <div class="toast-body">
-                            <h4>Success!</h4>
-                            <p>Your message has been sent successfully.</p>
+                            <h4>Message sent!</h4>
+                            <p>Thanks for reaching out — I'll get back to you soon.</p>
                         </div>
                     </div>
                 </div>
