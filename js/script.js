@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
     const typingText = document.getElementById('typing-text');
     if (typingText) {
-        const words = ['Senior IT Specialist', 'Network Administrator', 'Systems Engineer'];
+        const words = ['IT Specialist', 'Network Administrator', 'Systems Engineer'];
         let wordIndex = 0;
         let charIndex = 0;
         let isDeleting = false;

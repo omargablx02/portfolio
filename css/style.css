@@ -939,14 +939,19 @@ body.light-theme .theme-toggle-btn .moon-icon {
     padding: 20px 40px;
 }
 
-.timeline-item-single {
-    left: 50%;
-    width: min(620px, 92%);
-    transform: translateX(-50%);
+.timeline-item-left {
+    left: 0;
 }
 
-.timeline-item-single .timeline-dot {
-    right: auto;
+.timeline-item-right {
+    left: 50%;
+}
+
+.timeline-item-left .timeline-dot {
+    right: -22px;
+}
+
+.timeline-item-right .timeline-dot {
     left: -22px;
 }
 
@@ -2098,12 +2103,14 @@ body.light-theme .theme-toggle-btn .moon-icon {
         padding-right: 20px;
     }
 
-    .timeline-item-single {
+    .timeline-item-left,
+    .timeline-item-right {
         left: 0;
         transform: none;
     }
 
-    .timeline-item-single .timeline-dot {
+    .timeline-item-left .timeline-dot,
+    .timeline-item-right .timeline-dot {
         left: 8px;
         right: auto;
     }

@@ -1,6 +1,6 @@
 # Omar Ashraf — Portfolio
 
-Static personal portfolio for **Omar Ashraf**, Senior IT Specialist.
+Static personal portfolio for **Omar Ashraf**, IT Specialist.
 
 Live site is served from GitHub Pages (branch: `main`).
 
