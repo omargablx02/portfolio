@@ -17,4 +17,3 @@ npm-debug.log*
 # Windows / build leftovers
 *.tmp
 *.bak
-Thumbs.db:encrypt
