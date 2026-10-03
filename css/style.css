@@ -1463,7 +1463,7 @@ body.light-theme .theme-toggle-btn .moon-icon {
     width: 100%;
 }
 
-.edu-footer .edu-cert-link {
+.edu-footer .cert-view-link {
     margin-top: 0;
 }
 
@@ -1567,8 +1567,7 @@ body.light-theme .theme-toggle-btn .moon-icon {
     transform: translate(2px, -2px);
 }
 
-.cert-view-link,
-.edu-cert-link {
+.cert-view-link {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -1578,8 +1577,7 @@ body.light-theme .theme-toggle-btn .moon-icon {
     color: var(--accent-color);
 }
 
-.cert-view-link:hover,
-.edu-cert-link:hover {
+.cert-view-link:hover {
     text-decoration: underline;
 }
 
