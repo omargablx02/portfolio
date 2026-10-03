@@ -1529,6 +1529,55 @@ body.light-theme .theme-toggle-btn .moon-icon {
     color: var(--text-secondary);
 }
 
+/* Linked certificate: clickable title + explicit "View" affordance */
+.cert-info h3 a {
+    color: inherit;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color var(--transition-normal);
+}
+
+.cert-info h3 a:hover {
+    color: var(--accent-color);
+}
+
+.cert-info h3 a .cert-link-icon {
+    font-size: 0.72em;
+    opacity: 0.65;
+    transition: opacity var(--transition-normal), transform var(--transition-normal);
+}
+
+.cert-info h3 a:hover .cert-link-icon {
+    opacity: 1;
+    transform: translate(2px, -2px);
+}
+
+.cert-view-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.cert-view-link:hover {
+    text-decoration: underline;
+}
+
+/* Whole card is clickable when a certificate link exists */
+.cert-card.cert-linked {
+    cursor: pointer;
+    transition: transform var(--transition-normal), border-color var(--transition-normal);
+}
+
+.cert-card.cert-linked:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-color);
+}
+
 /* ==========================================================================
    CONTACT SECTION
    ========================================================================== */
