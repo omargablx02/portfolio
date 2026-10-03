@@ -1436,6 +1436,12 @@ body.light-theme .theme-toggle-btn .moon-icon {
 .edu-header h3 {
     font-size: 1.2rem;
     line-height: 1.3;
+    transition: color var(--transition-normal);
+}
+
+/* Match the certificate cards: the degree title tints on card hover */
+.education-card.cert-linked:hover .edu-header h3 {
+    color: var(--accent-color);
 }
 
 .edu-header p {
