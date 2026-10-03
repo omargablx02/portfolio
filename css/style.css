@@ -1418,8 +1418,8 @@ body.light-theme .theme-toggle-btn .moon-icon {
 .education-card {
     padding: 30px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 18px;
 }
 
 .edu-header {
@@ -1451,6 +1451,20 @@ body.light-theme .theme-toggle-btn .moon-icon {
     border-radius: 100px;
     font-size: 0.85rem;
     font-weight: 700;
+}
+
+/* Bottom row of the education card: grade badge left, certificate link right */
+.edu-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 100%;
+}
+
+.edu-footer .edu-cert-link {
+    margin-top: 0;
 }
 
 .languages-flex {
