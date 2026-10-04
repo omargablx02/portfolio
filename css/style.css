@@ -1225,8 +1225,14 @@ body.light-theme .theme-toggle-btn .moon-icon {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+}
+
+/* When filtering leaves a single project, let it use the full row instead of
+   sitting in the left column beside an empty gap. Toggled by the filter JS. */
+.projects-grid.grid-solo {
+    grid-template-columns: 1fr;
 }
 
 .project-card {
@@ -2035,8 +2041,7 @@ body.light-theme .theme-toggle-btn .moon-icon {
 
     .highlights-grid,
     .skills-grid,
-    .services-grid,
-    .projects-grid {
+    .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }

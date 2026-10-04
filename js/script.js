@@ -309,6 +309,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectCards = document.querySelectorAll('.project-card');
 
     if (filterButtons.length > 0 && projectCards.length > 0) {
+        const projectsGrid = document.querySelector('.projects-grid');
+
         filterButtons.forEach(btn => {
             btn.addEventListener('click', () => {
                 // Remove active classes
@@ -317,15 +319,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const filter = btn.getAttribute('data-filter');
 
+                let visible = 0;
+
                 projectCards.forEach(card => {
                     const category = card.getAttribute('data-category');
 
                     if (filter === 'all' || category === filter) {
                         card.classList.remove('fade-out');
+                        visible++;
                     } else {
                         card.classList.add('fade-out');
                     }
                 });
+
+                // A single surviving card should span the row rather than sit
+                // in the first column next to an empty gap.
+                if (projectsGrid) {
+                    projectsGrid.classList.toggle('grid-solo', visible === 1);
+                }
             });
         });
     }
