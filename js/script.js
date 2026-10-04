@@ -175,6 +175,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'light') {
             document.body.classList.add('light-theme');
+        } else if (savedTheme !== 'dark') {
+            // No stored preference yet: follow the operating system instead of
+            // always defaulting to dark.
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                document.body.classList.add('light-theme');
+            }
         }
 
         themeToggle.addEventListener('click', () => {
