@@ -483,8 +483,9 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.disabled = true;
 
             try {
-                // Accept: application/json makes FormSubmit answer with JSON
-                // instead of redirecting the visitor to an interstitial page.
+                // The /ajax/ endpoint answers with JSON. Accept: application/json
+                // keeps the visitor on the page instead of being redirected to a
+                // FormSubmit interstitial, which is what the plain endpoint does.
                 const response = await fetch(contactForm.action, {
                     method: 'POST',
                     body: new FormData(contactForm),
@@ -492,6 +493,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (!response.ok) throw new Error('HTTP ' + response.status);
+
+                // HTTP 200 alone is not proof of delivery: FormSubmit serves an HTML
+                // landing page with status 200 when it cannot process the payload.
+                // Only a JSON body reporting success counts as a real submission.
+                const raw = await response.text();
+                let result;
+                try {
+                    result = JSON.parse(raw);
+                } catch (parseErr) {
+                    throw new Error('unexpected non-JSON response from FormSubmit');
+                }
+
+                if (String(result.success) !== 'true') {
+                    throw new Error(result.message || 'FormSubmit rejected the submission');
+                }
 
                 contactForm.reset();
                 showToast(true, 'Message sent!', 'Thanks for reaching out — I\'ll get back to you soon.');
