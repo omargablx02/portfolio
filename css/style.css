@@ -644,13 +644,6 @@ body.light-theme .theme-toggle-btn .moon-icon {
     color: var(--accent-color);
 }
 
-.stat-tech-name {
-    font-size: 1.3rem;
-    font-weight: 700;
-    font-family: var(--font-heading);
-    margin-bottom: 5px;
-}
-
 .stat-label {
     font-size: 0.9rem;
     font-weight: 500;
