@@ -939,19 +939,14 @@ body.light-theme .theme-toggle-btn .moon-icon {
     padding: 20px 40px;
 }
 
-.timeline-item-left {
-    left: 0;
-}
-
-.timeline-item-right {
+.timeline-item-single {
     left: 50%;
+    width: min(620px, 92%);
+    transform: translateX(-50%);
 }
 
-.timeline-item-left .timeline-dot {
-    right: -22px;
-}
-
-.timeline-item-right .timeline-dot {
+.timeline-item-single .timeline-dot {
+    right: auto;
     left: -22px;
 }
 
@@ -2103,14 +2098,12 @@ body.light-theme .theme-toggle-btn .moon-icon {
         padding-right: 20px;
     }
 
-    .timeline-item-left,
-    .timeline-item-right {
+    .timeline-item-single {
         left: 0;
         transform: none;
     }
 
-    .timeline-item-left .timeline-dot,
-    .timeline-item-right .timeline-dot {
+    .timeline-item-single .timeline-dot {
         left: 8px;
         right: auto;
     }
