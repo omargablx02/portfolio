@@ -19,7 +19,7 @@ img/                profile photo and project screenshots
 
 ## Sections
 
-Hero · About · Highlights · Experience · Skills · Services · Projects ·
+Hero · About · How I Work · Experience · Skills · Services · Projects ·
 Career Objective + Certifications · Contact
 
 ## Features
