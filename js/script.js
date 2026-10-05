@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
     const typingText = document.getElementById('typing-text');
     if (typingText) {
-        const words = ['IT Specialist', 'Network & Systems Administration', 'Bash & Python Automation'];
+        const words = ['Networks & Routing', 'Windows Server & Oracle', 'CCTV & Device Fleets', 'Python & Bash Automation'];
         let wordIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
