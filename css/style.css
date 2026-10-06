@@ -198,6 +198,19 @@ h6 {
     margin-bottom: 0.5rem;
 }
 
+/* Second group inside a single column. Carries the reason the group exists:
+   these were studied for, not certified in. */
+.section-title-grouped {
+    margin-top: 2.5rem;
+}
+
+.credentials-note {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: -0.6rem;
+    margin-bottom: 1.1rem;
+}
+
 /* Buttons */
 .btn {
     display: inline-flex;
