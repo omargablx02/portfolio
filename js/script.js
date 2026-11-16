@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
     const typingText = document.getElementById('typing-text');
     if (typingText) {
-        const words = ['Systems & Networking', 'Windows Server 2012-2016', 'Hikvision CCTV', 'PowerShell & Python Automation'];
+        const words = ['Systems & Networking', 'Windows Server 2012-2016', 'Hikvision CCTV', 'Odoo ERP & Salesforce', 'PowerShell & Python Automation'];
         let wordIndex = 0;
         let charIndex = 0;
         let isDeleting = false;

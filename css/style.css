@@ -1005,6 +1005,12 @@ body.light-theme .theme-toggle-btn .moon-icon {
     margin-bottom: 12px;
 }
 
+.job-meta {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
 .job-overview {
     font-size: 0.95rem;
     color: var(--text-secondary);
