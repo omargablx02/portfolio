@@ -1574,6 +1574,15 @@ body.light-theme .theme-toggle-btn .moon-icon {
     transform: translate(2px, -2px);
 }
 
+.cert-view-note {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
 .cert-view-link {
     display: inline-flex;
     align-items: center;
